@@ -49,4 +49,18 @@ terraform apply \
   -var="subscription_id=<DEINE-SUBSCRIPTION-ID>"
 ```
 
+Konfigurieren
+
+```bash
+az provider register --namespace Microsoft.Compute
+az provider register --namespace Microsoft.Network
+az provider register --namespace Microsoft.Storage
+az provider register --namespace Microsoft.Relay
+
+az provider show --namespace Microsoft.Compute --query registrationState
+az provider show --namespace Microsoft.Network --query registrationState
+```
+
+
+
 ## Quellen

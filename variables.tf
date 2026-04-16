@@ -6,7 +6,7 @@ variable "subscription_id" {
 variable "location" {
   description = "Azure Region"
   type        = string
-  default     = "West Europe"
+  default     = "eastus"
 }
 
 variable "vm_count" {
