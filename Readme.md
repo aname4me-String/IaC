@@ -27,6 +27,26 @@ az login
 az account show  
 ```
 
+Install Terraform
 
+```bash
+cd /tmp
+curl -O https://releases.hashicorp.com/terraform/1.7.5/terraform_1.7.5_linux_amd64.zip
+unzip terraform_1.7.5_linux_amd64.zip
+sudo mv terraform /usr/local/bin/
+terraform -v
+```
+
+Terraform aufsetzen
+
+```bash
+terraform init        # azurerm-Provider herunterladen
+
+terraform plan \
+  -var="subscription_id=<DEINE-SUBSCRIPTION-ID>"
+
+terraform apply \
+  -var="subscription_id=<DEINE-SUBSCRIPTION-ID>"
+```
 
 ## Quellen
